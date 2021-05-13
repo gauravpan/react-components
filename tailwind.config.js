@@ -1,8 +1,6 @@
-console.log("----------", JSON.stringify(process.env, null, 2));
 module.exports = {
   purge: {
-    // enabled: process.env.node_env === "production",
-    enabled: true,
+    enabled: process.env.NODE_ENV === "production",
     content: ["./pages/**/*.{js,jsx}", "./components/**/*.{js,jsx}"],
   },
   darkMode: false, // or 'media' or 'class'
