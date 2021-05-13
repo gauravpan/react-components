@@ -1,5 +1,9 @@
+console.log("----------", process.env.node_env);
 module.exports = {
-  purge: [],
+  purge:
+    process.env.node_env === "production"
+      ? ["./pages/**/*.{js,jsx}", "./components/**/*.{js,jsx}"]
+      : [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -8,4 +12,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
