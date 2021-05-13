@@ -7,6 +7,9 @@ export default function Home() {
         <li className="text-blue-500">
           <Link href="/suggestion-input">SuggestionInput</Link>
         </li>
+        <li className="text-blue-500">
+          <Link href="/form">Form</Link>
+        </li>
       </ul>
     </div>
   );
