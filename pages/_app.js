@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "tailwindcss/tailwind.css";
 import Head from "next/head";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,7 +14,9 @@ function MyApp({ Component, pageProps }) {
 
         <title>React Component List</title>
       </Head>
-      <Component {...pageProps} />
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
     </>
   );
 }
